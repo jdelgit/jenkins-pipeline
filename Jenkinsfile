@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('HelloWorld') {
             steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                echo "Merge my branch in 2 repos, this is my first commit"
             }
         }
     }
