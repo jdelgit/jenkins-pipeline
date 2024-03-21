@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        MY_CRED = credentials('credentials_id')
+        MY_CRED = credentials('azure-dev-cred')
     }
     agent any
     stages {
