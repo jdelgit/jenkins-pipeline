@@ -3,12 +3,13 @@ pipeline {
     stages {
         stage('Initialize') {
             steps {
-                echo 'Merge my branch in 2 repos, this is my first commit'
+                sh 'git clone https://github.com/jdelgit/terraform-modules.git'
+                sh 'ls -la'
             }
         }
         stage('Plan') {
             steps {
-                sh 'terraform --version'
+                sh 'terraform -chdir=./test init'
             }
         }
     }
