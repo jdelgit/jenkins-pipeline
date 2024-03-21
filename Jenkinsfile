@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Plan') {
             steps {
-                sh 'terraform -chdir=./test plan --backend-config backend.conf -out test.plan'
+                sh 'terraform -chdir=./test plan -out test.plan'
             }
         }
     // stage('Apply plan') {
