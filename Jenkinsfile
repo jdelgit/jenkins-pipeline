@@ -9,6 +9,9 @@ pipeline {
                 sh 'az version'
                 sh 'az login --service-principal -u $MY_CRED_CLIENT_ID -p $MY_CRED_CLIENT_SECRET -t $MY_CRED_TENANT_ID'
                 sh 'az account show'
+                sh 'export ARM_CLIENT_ID=$(MY_CRED_CLIENT_ID)'
+                sh 'export ARM_CLIENT_SECRET=$(MY_CRED_CLIENT_SECRET)'
+                sh 'export ARM_TENANT_ID=$(MY_CRED_TENANT_ID)'
             }
         }
         stage('Initialize') {
