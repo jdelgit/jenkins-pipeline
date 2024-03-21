@@ -17,7 +17,7 @@ pipeline {
                 sh 'git clone https://github.com/jdelgit/terraform-modules.git'
                 sh 'ls -la'
                 sh 'echo $MY_CRED_CLIENT_ID'
-                sh 'export ARM_CLIENT_ID=$MY_CRED_CLIENT_ID'
+                sh 'export ARM_CLIENT_ID=${MY_CRED_CLIENT_ID}'
                 sh 'echo $ARM_CLIENT_ID'
 
                 // sh 'export AZURE_CLIENT_SECRET=$(MY_CRED_CLIENT_SECRET)'
