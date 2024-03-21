@@ -16,12 +16,7 @@ pipeline {
             steps {
                 sh 'git clone https://github.com/jdelgit/terraform-modules.git'
                 sh 'ls -la'
-                sh 'echo $ARM_CLIENT_ID'
-
-                // sh 'export AZURE_CLIENT_SECRET=$(ARM_CLIENT_SECRET)'
-                // sh 'export AZURE_TENANT_ID=$(ARM_TENANT_ID)'
-                // sh 'export AZURE_SUBSCRIPTION_ID=$(ARM_SUBSCRIPTION_ID)'
-                // sh 'terraform -chdir=./test init --backend-config backend.conf'
+                sh 'terraform -chdir=./test init --backend-config backend.conf'
             }
         }
         // stage('Plan') {
