@@ -10,6 +10,7 @@ pipeline {
                 sh 'az login --service-principal -u $MY_CRED_CLIENT_ID -p $MY_CRED_CLIENT_SECRET -t $MY_CRED_TENANT_ID'
                 sh 'az account show'
                 sh 'echo $AZURE_CLIENT_ID'
+                sh 'echo $MY_CRED_CLIENT_ID'
                 // sh 'export AZURE_CLIENT_ID=$(MY_CRED_CLIENT_ID)'
                 // sh 'export AZURE_CLIENT_SECRET=$(MY_CRED_CLIENT_SECRET)'
                 // sh 'export AZURE_TENANT_ID=$(MY_CRED_TENANT_ID)'
