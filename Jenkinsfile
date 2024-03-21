@@ -9,7 +9,6 @@ pipeline {
                 sh 'az version'
                 sh 'az login --service-principal -u $ARM_CLIENT_ID -p $ARM_CLIENT_SECRET -t $ARM_TENANT_ID'
                 sh 'az account show'
-                // sh 'echo $ARM_CLIENT_ID'
             }
         }
         stage('Initialize') {
@@ -20,7 +19,7 @@ pipeline {
         }
         stage('Plan') {
             steps {
-                sh 'terraform plan -chdir=./test --backend-config backend.conf -out test.plan'
+                sh 'terraform -chdir=./test plan --backend-config backend.conf -out test.plan'
             }
         }
     // stage('Apply plan') {
