@@ -5,12 +5,16 @@ pipeline {
             steps {
                 sh 'git clone https://github.com/jdelgit/terraform-modules.git'
                 sh 'ls -la'
+                sh 'terraform -chdir=./test init --backend-config backend.conf'
             }
         }
         stage('Plan') {
             steps {
-                sh 'terraform -chdir=./test init --backend-config backend.conf'
+                sh 'terraform plan -chdir=./test --backend-config backend.conf -out test.plan'
             }
         }
+        // stage('Apply plan') {
+        //         sh 'terraform apply test.plan --backend-config backend.conf'
+        // }
     }
 }
