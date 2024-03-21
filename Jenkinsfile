@@ -1,9 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('HelloWorld') {
+        stage('Initialize') {
             steps {
-                echo "Merge my branch in 2 repos, this is my first commit"
+                echo 'Merge my branch in 2 repos, this is my first commit'
+            }
+        }
+        stage('Plan') {
+            steps {
+                echo 'Make a plan'
             }
         }
     }
