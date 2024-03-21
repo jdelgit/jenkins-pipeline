@@ -13,7 +13,6 @@ pipeline {
         }
         stage('Azure login') {
             steps {
-                MY_CRED = credentials('azure-dev-cred')
                 sh 'az version'
                 sh 'az login --service-principal -u $MY_CRED_CLIENT_ID -p $MY_CRED_CLIENT_SECRET -t $MY_CRED_TENANT_ID'
                 sh 'az account show'
