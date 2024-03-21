@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Plan') {
             steps {
-                echo 'Make a plan'
+                terraform --version
             }
         }
     }
