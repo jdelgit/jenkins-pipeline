@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Plan') {
             steps {
-                sh 'terraform -chdir=./test init'
+                sh 'terraform -chdir=./test init --backend-config backend.conf'
             }
         }
     }
