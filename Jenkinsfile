@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Plan') {
             steps {
-                terraform --help
+                sh 'terraform --help'
             }
         }
     }
