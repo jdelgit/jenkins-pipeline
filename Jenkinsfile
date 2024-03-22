@@ -4,13 +4,13 @@ pipeline {
     }
     agent any
     stages {
-        stage('Azure login') {
-            steps {
-                sh 'az version'
-                sh 'az login --service-principal -u $ARM_CLIENT_ID -p $ARM_CLIENT_SECRET -t $ARM_TENANT_ID'
-                sh 'az account show'
-            }
-        }
+        // stage('Azure login') {
+        //     steps {
+        //         sh 'az version'
+        //         sh 'az login --service-principal -u $ARM_CLIENT_ID -p $ARM_CLIENT_SECRET -t $ARM_TENANT_ID'
+        //         sh 'az account show'
+        //     }
+        // }
         stage('Initialize') {
             steps {
                 sh 'git clone https://github.com/jdelgit/terraform-modules.git'
