@@ -8,4 +8,4 @@ for line in lines:
     line = line.split("=")
     print(line)
 
-exit(1)
+# exit(1)
