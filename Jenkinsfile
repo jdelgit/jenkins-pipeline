@@ -4,7 +4,9 @@ pipeline {
     agent any
     stages {
         stage('Test Python script') {
-            sh 'python test.py'
+            steps {
+                sh 'python test.py'
+            }
         }
     }
 }
