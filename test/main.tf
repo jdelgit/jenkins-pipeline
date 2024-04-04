@@ -19,12 +19,12 @@ provider "azurerm" {
   }
 }
 
-resource "azurerm_resource_group" "deployment_rg" {
-  name     = "rg-jenkins"
-  location = "westeurope"
-  tags     = {
-    environment = "dev"
-    projectCode = "jenkins"
-    invoiceCode = "jenkins"
-  }
-}
+# resource "azurerm_resource_group" "deployment_rg" {
+#   name     = "rg-jenkins"
+#   location = "westeurope"
+#   tags     = {
+#     environment = "dev"
+#     projectCode = "jenkins"
+#     invoiceCode = "jenkins"
+#   }
+# }
