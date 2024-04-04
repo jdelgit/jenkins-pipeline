@@ -6,6 +6,12 @@ pipeline {
         stage('Test Python script') {
             steps {
                 sh 'python3 test.py'
+                echo "Moving to the next line"
+            }
+        }
+        stage ('Continuation') {
+            steps {
+                echo "Made it to the next statge"
             }
         }
     }
